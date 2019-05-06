@@ -1,15 +1,14 @@
 .tile {
     height: 250px;
-    flex-basis: 32%;
     width: 250px;
+    flex-basis: 32%;
     flex-grow: 1;
     text-align: center;
-    // border: solid black 5px;
     box-sizing: border-box;
     border: 3px solid transparent;
+    border-radius: 5px;
     background-clip: padding-box, border-box;
     background-origin: padding-box, border-box;
-    // background-image: linear-gradient(#fff, #fff), linear-gradient(#FFAFBD, #ED4264);
 }
 
 $linearGradientBackground: linear-gradient(#fff, #fff);
@@ -18,39 +17,112 @@ $linearGradientBackground: linear-gradient(#fff, #fff);
     @return linear-gradient(to right, $color1, $color2)
 };
 
+
 .tile1 {
-    background-image: $linearGradientBackground, linearGradient(#c2e9fb, #a1c4fd);
-    color: linearGradient(#c2e9fb, #a1c4fd);
+    background-image: $linearGradientBackground, linearGradient(rgba(164,199,252, 0.25), rgba(164,199,252, 1));
 }
 
+// .tile1:hover {
+//     background-image: $linearGradientBackground, linearGradient(#c2e9fb, #a1c4fd);
+//     background-position: right center;
+//     transition: animateGradient 1s ease-in-out;
+//     z-index: 2;
+//     opacity: 0.5;
+// }
+
 .tile2 {
-    background-image: $linearGradientBackground, linearGradient(#d4fc79, #96e6a1);
+    background-image: $linearGradientBackground, linearGradient(rgba(156,232,157,0.25), rgba(156,232,157,1));
 }
 
 .tile3 {
-    background-image: $linearGradientBackground, linearGradient(#fccb90, #d57eeb);
+    background-image: $linearGradientBackground, linearGradient(rgba(213,126,234,0.25), rgba(213,126,234,1));
 }
 
 .tile4 {
-    background-image: $linearGradientBackground, linearGradient(#f83600, #f9d423);
+    background-image: $linearGradientBackground, linearGradient(rgba(248,54,0,0.25), rgba(248,54,0,1));
 }
 
 .tile5 {
-    background-image: $linearGradientBackground, linearGradient(#cc208e, #6713d2);
+    background-image: $linearGradientBackground, linearGradient(rgba(103,19,209,0.25), rgba(103,19,209,1));
 }
 
 .tile6 {
-    background-image: $linearGradientBackground, linearGradient(#ebc0fd, #d9ded8);
+    background-image: $linearGradientBackground, linearGradient(rgba(145,254,157,0.25), rgba(145,254,157,1));
 }
 
 .tile7 {
-    background-image: $linearGradientBackground, linearGradient(#92fe9d, #00c9ff);
+    background-image: $linearGradientBackground, linearGradient(rgba(0,201,254,0.25), rgba(0,201,254,1));
 }
 
 .tile8 {
-    background-image: $linearGradientBackground, linearGradient(#e8ebcb, #f5d62a);
+    background-image: $linearGradientBackground, linearGradient(rgba(245,214,42,0.25), rgba(245,214,42,1));
 }
 
 .tile9 {
-    background-image: $linearGradientBackground, linearGradient(#fed6e3, #a8edea);
+    background-image: $linearGradientBackground, linearGradient(rgba(168,237,234,0.25), rgba(168,237,234,1));
+}
+
+$webkitClip: text;
+$webkitFill: transparent;
+
+.tileTitle {
+    font-family: "Poppins", sans-serif;
+    text-transform: uppercase;
+    background: $linearGradientBackground;
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle1 {
+    background: linearGradient(rgba(164,199,252, 0.5), rgba(164,199,252, 1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle2 {
+    background: linearGradient(rgba(156,232,157,0.5), rgba(156,232,157,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle3 {
+    background: linearGradient(rgba(213,126,234,0.5), rgba(213,126,234,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle4 {
+    background: linearGradient(rgba(248,54,0,0.5), rgba(248,54,0,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle5 {
+    background: linearGradient(rgba(103,19,209,0.5), rgba(103,19,209,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle6 {
+    background: linearGradient(rgba(145,254,157,0.5), rgba(145,254,157,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle7 {
+    background: linearGradient(rgba(0,201,254,0.5), rgba(0,201,254,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle8 {
+    background: linearGradient(rgba(245,214,42,0.5), rgba(245,214,42,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
+}
+
+.tileTitle9 {
+    background: linearGradient(rgba(168,237,234,0.5), rgba(168,237,234,1));
+    -webkit-background-clip: $webkitClip;
+    -webkit-text-fill-color: $webkitFill;
 }

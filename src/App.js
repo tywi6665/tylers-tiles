@@ -9,39 +9,48 @@ class App extends Component {
   state = {
     filler: [{
       id: 1,
+      title: "Color Gradient",
       text: "hey ya!",
     }, {
       id: 2,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 3,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 4,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 5,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 6,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 7,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 8,
+      title: "Color Gradient",
       text: "hey ya!",
     },
     {
       id: 9,
+      title: "Color Gradient",
       text: "hey ya!",
-    },]
+    }]
   }
 
   render() {
@@ -49,7 +58,7 @@ class App extends Component {
       <Container>
         <Subcontainer>
           {this.state.filler.map(fill => (
-            <Tile className={fill.id} something={fill.text} key={fill.id} />
+            <Tile className={fill.id} title={fill.title} something={fill.text} key={fill.id} />
           ))}
         </Subcontainer>
       </Container>
