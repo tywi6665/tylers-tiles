@@ -12,6 +12,45 @@
     // background-image: linear-gradient(#fff, #fff), linear-gradient(#FFAFBD, #ED4264);
 }
 
+$linearGradientBackground: linear-gradient(#fff, #fff);
+
+@function linearGradient($color1, $color2) {
+    @return linear-gradient(to right, $color1, $color2)
+};
+
 .tile1 {
-    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #c2e9fb, #a1c4fd);
+    background-image: $linearGradientBackground, linearGradient(#c2e9fb, #a1c4fd);
+    color: linearGradient(#c2e9fb, #a1c4fd);
+}
+
+.tile2 {
+    background-image: $linearGradientBackground, linearGradient(#d4fc79, #96e6a1);
+}
+
+.tile3 {
+    background-image: $linearGradientBackground, linearGradient(#fccb90, #d57eeb);
+}
+
+.tile4 {
+    background-image: $linearGradientBackground, linearGradient(#f83600, #f9d423);
+}
+
+.tile5 {
+    background-image: $linearGradientBackground, linearGradient(#cc208e, #6713d2);
+}
+
+.tile6 {
+    background-image: $linearGradientBackground, linearGradient(#ebc0fd, #d9ded8);
+}
+
+.tile7 {
+    background-image: $linearGradientBackground, linearGradient(#92fe9d, #00c9ff);
+}
+
+.tile8 {
+    background-image: $linearGradientBackground, linearGradient(#e8ebcb, #f5d62a);
+}
+
+.tile9 {
+    background-image: $linearGradientBackground, linearGradient(#fed6e3, #a8edea);
 }
