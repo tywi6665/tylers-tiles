@@ -3,7 +3,9 @@ import "./Subcontainer.scss";
 
 const Subcontainer = ({ children }) => (
     <section className="subcontainer">
-        { children }
+        <div className="gridRow">
+            { children }
+        </div>
     </section>
 );
 
