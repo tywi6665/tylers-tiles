@@ -7,58 +7,34 @@ import './App.scss';
 class App extends Component {
 
   state = {
-    filler: [{
-      id: 1,
-      title: "Color Gradient",
-      text: "hey ya!",
-    }, {
-      id: 2,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 3,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 4,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 5,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 6,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 7,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 8,
-      title: "Color Gradient",
-      text: "hey ya!",
-    },
-    {
-      id: 9,
-      title: "Color Gradient",
-      text: "hey ya!",
-    }]
+    questions: []
+  };
+
+  componentDidMount() {
+    this.fetchData()
   }
+
+  fetchData = () => {
+    fetch("https://opentdb.com/api.php?amount=9&category=17&type=multiple", {
+      method: "get"
+    }).then(res => {
+      return res.json();
+    }).then(data => {
+      this.setState({ questions: data.results })
+    });
+  };
 
   render() {
     return (
       <Container>
         <Subcontainer>
-          {this.state.filler.map(fill => (
-            <Tile className={fill.id} title={fill.title} something={fill.text} key={fill.id} />
+          {this.state.questions.map((question, i) => (
+            <Tile className={i} 
+              title={question.question.replace(/&quot;/g, "").replace(/&#039/g, "")} 
+              incorrectAnswers={question.incorrect_answers}
+              correctAnswer={question.correct_answer} 
+              key={i}
+              />
           ))}
         </Subcontainer>
       </Container>
